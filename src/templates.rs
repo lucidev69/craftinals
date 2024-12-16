@@ -12,7 +12,7 @@ pub(crate) use {
   home::HomeHtml,
   iframe::Iframe,
   input::InputHtml,
-  inscription::{InscriptionByAddressJson, InscriptionHtml, InscriptionJson, ShibescriptionJson},
+  inscription::{InscriptionByAddressJson, InscriptionHtml, InscriptionJson, CraftscriptionsJson},
   inscriptions::InscriptionsHtml,
   output::AddressOutputJson,
   output::OutputHtml,

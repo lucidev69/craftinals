@@ -17,7 +17,7 @@ use {
       InputHtml, InscriptionByAddressJson, InscriptionHtml, InscriptionJson, InscriptionsHtml,
       OutputHtml, OutputJson, PageContent, PageHtml, PreviewAudioHtml, PreviewImageHtml,
       PreviewModelHtml, PreviewPdfHtml, PreviewTextHtml, Operation, PreviewUnknownHtml, PreviewVideoHtml,
-      RangeHtml, RareTxt, SatHtml, ShibescriptionJson, TransactionHtml, Utxo, DRC20,
+      RangeHtml, RareTxt, SatHtml, CraftscriptionsJson, TransactionHtml, Utxo, DRC20,
     },
   },
   axum::{
@@ -2171,7 +2171,7 @@ impl Server {
     for (number, id) in index.get_feed_inscriptions(300)? {
       builder.item(
         rss::ItemBuilder::default()
-          .title(format!("Shibescription {number}"))
+          .title(format!("Craftscriptions {number}"))
           .link(format!("/shibescription/{id}"))
           .guid(Some(rss::Guid {
             value: format!("/shibescription/{id}"),
@@ -2477,7 +2477,7 @@ impl Server {
       }
 
       Ok(
-        Json(ShibescriptionJson {
+        Json(CraftscriptionsJson {
           chain: page_config.chain,
           genesis_fee: entry.fee,
           genesis_height: entry.height,
@@ -4203,7 +4203,7 @@ mod tests {
     server.assert_response_regex(
       format!("/shibescription/{}", InscriptionId::from(txid)),
       StatusCode::OK,
-      ".*<title>Shibescription 0</title>.*",
+      ".*<title>Craftscriptions 0</title>.*",
     );
   }
 
@@ -4281,7 +4281,7 @@ mod tests {
     server.assert_response_regex(
       "/feed.xml",
       StatusCode::OK,
-      ".*<title>Shibescription 0</title>.*",
+      ".*<title>Craftscriptions 0</title>.*",
     );
   }
 

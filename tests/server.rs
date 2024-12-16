@@ -52,7 +52,7 @@ fn inscription_page() {
       ".*<meta property=og:title content='Inscription 0'>.*
 .*<meta property=og:image content='https://.*/favicon.png'>.*
 .*<meta property=twitter:card content=summary>.*
-<h1>Shibescription 0</h1>
+<h1>Craftscriptions 0</h1>
 .*<iframe .* src=/preview/{inscription}></iframe>.*
 <dl>
   <dt>id</dt>
@@ -139,7 +139,7 @@ fn inscription_page_after_send() {
   ord_server.assert_response_regex(
     format!("/shibescription/{inscription}"),
     format!(
-      r".*<h1>Shibescription 0</h1>.*<dt>location</dt>\s*<dd class=monospace>{reveal}:0:0</dd>.*",
+      r".*<h1>Craftscriptions 0</h1>.*<dt>location</dt>\s*<dd class=monospace>{reveal}:0:0</dd>.*",
     ),
   );
 
@@ -158,7 +158,7 @@ fn inscription_page_after_send() {
   ord_server.assert_response_regex(
     format!("/shibescription/{inscription}"),
     format!(
-      r".*<h1>Shibescription 0</h1>.*<dt>address</dt>\s*<dd class=monospace>bc1qcqgs2pps4u4yedfyl5pysdjjncs8et5utseepv</dd>.*<dt>location</dt>\s*<dd class=monospace>{send}:0:0</dd>.*",
+      r".*<h1>Craftscriptions 0</h1>.*<dt>address</dt>\s*<dd class=monospace>bc1qcqgs2pps4u4yedfyl5pysdjjncs8et5utseepv</dd>.*<dt>location</dt>\s*<dd class=monospace>{send}:0:0</dd>.*",
     ),
   )
 }
@@ -242,7 +242,7 @@ fn inscriptions_page() {
   TestServer::spawn_with_args(&rpc_server, &[]).assert_response_regex(
     "/craftscriptions",
     format!(
-      ".*<h1>Shibescription</h1>
+      ".*<h1>Craftscriptions</h1>
 <div class=thumbnails>
   <a href=/shibescription/{inscription}>.*</a>
 </div>
@@ -279,7 +279,7 @@ fn inscriptions_page_has_next_and_previous() {
   TestServer::spawn_with_args(&rpc_server, &[]).assert_response_regex(
     format!("/shibescription/{b}"),
     format!(
-      ".*<h1>Shibescription 1</h1>.*
+      ".*<h1>Craftscriptions 1</h1>.*
 <div class=inscription>
 <a class=prev href=/shibescription/{a}>❮</a>
 <iframe .* src=/preview/{b}></iframe>

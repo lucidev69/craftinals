@@ -14,7 +14,7 @@ pub struct InscriptionsJson {
 
 impl PageContent for InscriptionsHtml {
   fn title(&self) -> String {
-    "Shibescription".into()
+    "Craftscriptions".into()
   }
 }
 
@@ -31,7 +31,7 @@ mod tests {
         next: None,
       },
       "
-        <h1>Shibescription</h1>
+        <h1>Craftscriptions</h1>
         <div class=thumbnails>
           <a href=/shibescription/1{64}i1><iframe .* src=/preview/1{64}i1></iframe></a>
           <a href=/shibescription/2{64}i2><iframe .* src=/preview/2{64}i2></iframe></a>
@@ -54,7 +54,7 @@ mod tests {
         next: Some(2),
       },
       "
-        <h1>Shibescription</h1>
+        <h1>Craftscriptions</h1>
         <div class=thumbnails>
           <a href=/shibescription/1{64}i1><iframe .* src=/preview/1{64}i1></iframe></a>
           <a href=/shibescription/2{64}i2><iframe .* src=/preview/2{64}i2></iframe></a>

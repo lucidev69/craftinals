@@ -431,8 +431,8 @@ paths:
 
   /shibescription/{inscription_id}:
     get:
-      summary: Get Shibescription details
-      operationId: getShibescription
+      summary: Get Craftscriptions details
+      operationId: getCraftscriptions
       parameters:
         - name: inscription_id
           in: path
@@ -442,7 +442,7 @@ paths:
             type: string
       responses:
         '200':
-          description: Shibescription details
+          description: Craftscriptions details
           content:
             text/html:
               schema:

@@ -20,7 +20,7 @@ pub(crate) struct InscriptionHtml {
 }
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
-pub(crate) struct ShibescriptionJson {
+pub(crate) struct CraftscriptionsJson {
   pub(crate) chain: Chain,
   pub(crate) genesis_fee: u64,
   pub(crate) genesis_height: u32,
@@ -67,7 +67,7 @@ pub struct InscriptionByAddressJson {
 
 impl PageContent for InscriptionHtml {
   fn title(&self) -> String {
-    format!("Shibescription {}", self.inscription_number)
+    format!("Craftscriptions {}", self.inscription_number)
   }
 
   fn preview_image_url(&self) -> Option<Trusted<String>> {
@@ -92,7 +92,7 @@ mod tests {
         ..Default::default()
       },
       "
-        <h1>Shibescription 1</h1>
+        <h1>Craftscriptions 1</h1>
         <div class=inscription>
         <div>❮</div>
         <iframe .* src=/preview/1{64}i1></iframe>
@@ -147,7 +147,7 @@ mod tests {
         ..Default::default()
       },
       "
-        <h1>Shibescription 1</h1>
+        <h1>Craftscriptions 1</h1>
         .*
         <dl>
           .*
@@ -176,7 +176,7 @@ mod tests {
         ..Default::default()
       },
       "
-        <h1>Shibescription 1</h1>
+        <h1>Craftscriptions 1</h1>
         <div class=inscription>
         <a class=prev href=/shibescription/1{64}i1>❮</a>
         <iframe .* src=/preview/2{64}i2></iframe>
@@ -201,7 +201,7 @@ mod tests {
         ..Default::default()
       },
       "
-        <h1>Shibescription 1</h1>
+        <h1>Craftscriptions 1</h1>
         .*
         <dl>
           .*

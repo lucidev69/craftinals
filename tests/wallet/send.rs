@@ -28,7 +28,7 @@ fn inscriptions_can_be_sent() {
   ord_server.assert_response_regex(
     format!("/shibescription/{inscription}"),
     format!(
-      ".*<h1>Shibescription 0</h1>.*<dl>.*
+      ".*<h1>Craftscriptions 0</h1>.*<dl>.*
   <dt>content length</dt>
   <dd>3 bytes</dd>
   <dt>content type</dt>
@@ -84,7 +84,7 @@ fn send_inscribed_sat() {
   ord_server.assert_response_regex(
     format!("/shibescription/{inscription}"),
     format!(
-      ".*<h1>Shibescription 0</h1>.*<dt>location</dt>.*<dd class=monospace>{send_txid}:0:0</dd>.*",
+      ".*<h1>Craftscriptions 0</h1>.*<dt>location</dt>.*<dd class=monospace>{send_txid}:0:0</dd>.*",
     ),
   );
 }
